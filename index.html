@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muzeum Windows – Optymizer.exe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash screen -->
+<div id="splash-screen">
+  <h1>🏛️ Muzeum Windows</h1>
+  <button id="enter-btn">Kliknij, żeby wejść</button>
+</div>
+
+<!-- Główne menu -->
+<div id="main-menu" class="hidden">
+
+  <nav id="tabs">
+    <button class="tab-btn" data-target="pokoj1">Pokój I</button>
+    <button class="tab-btn" data-target="pokoj2">Pokój II</button>
+    <button class="tab-btn" data-target="pokoj3">Pokój III</button>
+    <button class="tab-btn" data-target="dlc2">DLC #2</button>
+    <button class="tab-btn" data-target="dlc3">DLC #3 (ARG)</button>
+    <button class="tab-btn" data-target="hardcore">Tryb Hardcore</button>
+  </nav>
+
+  <div id="tabs-content">
+    <!-- Pokój I -->
+    <section id="pokoj1" class="tab-content">
+      <h2>🚪 Pokój I – Jak NIE instalować syfu</h2>
+      <ul>
+        <li>Film z AI-lektorem i miniaturą „+500% FPS 😱”</li>
+        <li>Link w opisie prowadzący do losowego hostingu</li>
+        <li>Program nazwany <code>free_optymizer.exe</code></li>
+        <li class="warning">Prośba o wyłączenie Windows Defendera</li>
+      </ul>
+    </section>
+
+    <!-- Pokój II -->
+    <section id="pokoj2" class="tab-content hidden">
+      <h2>🚪 Pokój II – Co robi optymizer.exe (technicznie)</h2>
+      <ul>
+        <li>Dodanie procesów do autostartu</li>
+        <li>Wyłączenie usług bezpieczeństwa</li>
+        <li>Pobieranie dodatkowych komponentów w tle</li>
+        <li>Zamulanie RAM-u losowymi procesami</li>
+        <li>Modyfikacja rejestru bez cofki</li>
+      </ul>
+    </section>
+
+    <!-- Pokój III -->
+    <section id="pokoj3" class="tab-content hidden">
+      <h2>🚪 Pokój III – Lore Windows Horror Edition</h2>
+      <ul>
+        <li>Losowe dźwięki systemowe</li>
+        <li>Procesy bez nazwy</li>
+        <li>Tapety creepypasta</li>
+        <li>Herbatka dla wirusów ☕</li>
+        <li class="warning">Jumpscare JP2 o 21:37</li>
+      </ul>
+    </section>
+
+    <!-- DLC #2 -->
+    <section id="dlc2" class="tab-content hidden">
+      <h2>🧩 DLC #2 – Fullscreen Horror Simulator</h2>
+      <button id="start-simulator">Uruchom symulację DLC #2</button>
+      <pre id="logs" style="display:none;"></pre>
+      <p id="achievements" style="display:none;"></p>
+    </section>
+
+    <!-- DLC #3 -->
+    <section id="dlc3" class="tab-content hidden">
+      <h2>🧩 DLC #3 – ARG: Ukryte sygnały</h2>
+      <button id="start-arg">Uruchom ARG</button>
+      <pre id="arg-log" style="background:#0008; padding:1rem; border-radius:12px; width:80%; height:200px; overflow:auto; text-align:left;"></pre>
+      <p id="arg-result" style="color:#6bff95;"></p>
+    </section>
+
+    <!-- Tryb Hardcore -->
+    <section id="hardcore" class="tab-content hidden">
+      <h2>🔥 Tryb Hardcore</h2>
+      <ul>
+        <li>⏳ Wydłużone etapy symulacji</li>
+        <li>📜 Dłuższe logi + szybkie tempo</li>
+        <li>🎲 Więcej losowości (bezpieczne)</li>
+        <li>🏆 Dodatkowe achievementy</li>
+      </ul>
+      <button id="start-hardcore">Włącz Hardcore (preview)</button>
+    </section>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
