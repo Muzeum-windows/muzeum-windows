@@ -1,0 +1,36 @@
+body {
+  margin:0; font-family:system-ui, sans-serif; background:#0f1220; color:#eaeaf0;
+}
+.hidden { display:none; }
+
+/* Splash screen */
+#splash-screen {
+  position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:#141833; transition:opacity 0.8s;
+}
+#splash-screen h1 { font-size:3rem; margin-bottom:1rem; }
+#splash-screen button { padding:1rem 2rem; font-size:1.2rem; border:none; border-radius:10px; cursor:pointer; background:#6a00ff; color:#fff; }
+
+/* Main menu */
+#main-menu { padding:2rem; transition:transform 0.8s; }
+nav#tabs { display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem; }
+nav#tabs::-webkit-scrollbar { height:6px; }
+nav#tabs::-webkit-scrollbar-thumb { background:#6a00ff; border-radius:3px; }
+.tab-btn { padding:.5rem 1rem; background:#171c3d; border:none; border-radius:8px; color:#9ad7ff; cursor:pointer; white-space:nowrap; }
+.tab-btn:hover { background:#6a00ff; color:#fff; }
+
+.tab-content { background:#171c3d; padding:2rem; margin-bottom:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  opacity:0; transform:scale(0.95); transition: opacity 0.6s, transform 0.6s;
+}
+.tab-content:not(.hidden) { opacity:1; transform:scale(1); }
+h2 { color:#7cf3ff; }
+.warning { color:#ff6b6b; font-weight:bold; }
+button { cursor:pointer; }
+
+/* Animacje logów */
+#logs, #arg-log, #hc-log { font-family: monospace; line-height:1.4; white-space: pre-wrap; }
+.mystic { color: #ff6; animation: blink 0.8s infinite; }
+@keyframes blink { 0%,100% {opacity:1;} 50% {opacity:0.3;} }
+
+/* Easter Egg efekt */
+.easter-egg { background: linear-gradient(135deg, #6a00ff, #00d4ff); color:#fff; padding:1rem; border-radius:16px; font-size:1.5rem; text-align:center; box-shadow:0 0 20px rgba(0,255,255,0.6); animation:pulse 1s infinite alternate; }
+@keyframes pulse { 0% {transform: scale(1);} 100% {transform: scale(1.1);} }
